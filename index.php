@@ -17,22 +17,24 @@
 		<form action="index.php" method="GET">
 			<input type="text" name="value1"
 				value="<?= htmlspecialchars($value1)?>">
-			<input <?php if ($_GET['operation'] == '/' && $value2==0){ echo 'class="invalid" ' ; 
-					} ?> type="text" name="value2" value="<?= htmlspecialchars($value2)?>">
+			<input <?php if ($_GET['operation'] == '*' && $value2== 0)
+						{ 
+							echo 'class="invalid"' ; 
+						} ?> type="text" name="value2" value="<?= htmlspecialchars($value2)?>">
 					
 			  <select name = 'operation';>
 			          <option value= "+" <?php
 					  if ($_GET['operation'] == '+'){
-					   echo 'selected'}?>> Сложить </option>
+					   echo 'selected';}?>> Сложить </option>
 					  <option value= "-"<?php
 					  if ($_GET['operation'] == '-'){
-					   echo 'selected'}?>> Вычесть </option>
+					   echo 'selected';}?>> Вычесть </option>
 					  <option value= "*"<?php
 					  if ($_GET['operation'] == '*'){
-					   echo 'selected'}?>> Умножить </option>
+					   echo 'selected';}?>> Умножить </option>
 					  <option value= "/"<?php
 					  if ($_GET['operation'] == '/'){
-					   echo 'selected'}?>>Разделить </option>
+					   echo 'selected';}?>>Разделить </option>
 				</select>
 			</form>
 			<!--
